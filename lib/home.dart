@@ -843,18 +843,6 @@ class _HomeState extends State<Home> {
           ),
           alignment: Alignment.centerRight,
         ),
-        // actions: [
-        //   PopupMenuButton<Choice>(
-        //     itemBuilder: (context) {
-        //       return choices.map((k) {
-        //         return PopupMenuItem(
-        //           value: k,
-        //           child: Text(k.title),
-        //         );
-        //       }).toList();
-        //     },
-        //   ),
-        // ],
       ),
       body: SafeArea(
         child: Column(
