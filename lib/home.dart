@@ -36,176 +36,930 @@ class _HomeState extends State<Home> {
         ),
       ),
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              padding: EdgeInsets.only(left: 15.0, top: 5.0, bottom: 5.0),
-              color: Color.fromARGB(255, 152, 201, 58),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Tuesday, 6 April',
-                        style: TextStyle(
-                          fontSize: 22.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            '04:17',
-                            style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(left: 10.0, right: 20.0),
-                            child: Icon(
-                              Icons.search,
-                              color: Colors.black,
-                              size: 32.0,
-                            ),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 15.0, top: 5.0, bottom: 5.0),
+                color: Color.fromARGB(255, 152, 201, 58),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          width: 80.0,
-                          child: Row(
-                            children: [
-                              Text(
-                                'Status',
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                ),
-                              ),
-                              Icon(
-                                Icons.arrow_drop_down,
-                                color: Colors.black,
-                              ),
-                            ],
+                        Text(
+                          'Tuesday, 6 April',
+                          style: TextStyle(
+                            fontSize: 22.0,
+                            color: Colors.white,
                           ),
                         ),
-                        SizedBox(width: 5.0),
-                        Container(
-                          width: 90.0,
-                          child: Row(
-                            children: [
-                              Text(
-                                'Name',
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                ),
-                              ),
-                              Icon(
-                                Icons.arrow_drop_down,
-                                color: Colors.black,
-                              ),
-                            ],
-                          ),
-                        ),               
-                        SizedBox(width: 5.0),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Text(
-                              'Time Log',
+                              '04:17',
                               style: TextStyle(
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
+                                fontSize: 20.0,
+                                color: Colors.white,
                               ),
                             ),
-                            Icon(
-                              Icons.arrow_drop_down,
-                              color: Colors.black,
-                            ),
-                          ],
-                        ),     
-                        SizedBox(width: 5.0),
-                        Row(
-                          children: [
-                            Text(
-                              'Time Log Out',
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.bold,
+                            Padding(
+                              padding: EdgeInsets.only(left: 10.0, right: 20.0),
+                              child: Icon(
+                                Icons.search,
                                 color: Colors.black,
+                                size: 32.0,
                               ),
-                            ),
-                            Icon(
-                              Icons.arrow_drop_down,
-                              color: Colors.black,
-                            ),
+                            )
                           ],
-                        ),     
-                        SizedBox(width: 5.0),
-                        Row(
-                          children: [
-                            Text(
-                              'Approve',
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                              ),
-                            ),
-                            Icon(
-                              Icons.arrow_drop_down,
-                              color: Colors.black,
-                            ),
-                          ],
-                        ),   
+                        ),
                       ],
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            
-            Container(
-              color: Colors.white,
-              padding: EdgeInsets.only(left: 15.0, top: 10.0, bottom: 10.0),
-              child: Row(
-                children: [
-                  Container(
-                    width: 25.0,
-                    height: 25.0,
-                    margin: EdgeInsets.only(left: 10.0),
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 37, 246, 11),
-                      borderRadius: BorderRadius.all(Radius.circular(12.5)),
+              
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0, bottom: 10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 25.0,
+                                height: 25.0,
+                                margin: EdgeInsets.only(left: 10.0),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 37, 246, 11),
+                                  borderRadius: BorderRadius.all(Radius.circular(12.5)),
+                                ),
+                              ),
+                              SizedBox(width: 10.0),
+                              SizedBox(
+                                width: 80.0,
+                                child: Text(
+                                  'Name: ',
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                  ),
+                                ),
+                              ),
+                              Flexible(
+                                child: Text(
+                                  'Mr Ng Thye Peng',
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            SizedBox(
+                              width: 100.0,
+                              child: TextButton(
+                                onPressed: () {
+
+                                },
+                                child: Text(
+                                  'Clear',
+                                  style: TextStyle(
+                                    color: Color.fromARGB(255, 83, 88, 82),
+                                  ),
+                                ),
+                                style: TextButton.styleFrom(
+                                  primary: Color.fromARGB(255, 83, 88, 82),
+                                  backgroundColor: Color.fromARGB(255, 40, 193, 53),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10.0),
+                          ],
+                        ),
+                      ],
                     ),
-                  ),
-                  Container(
-                    width: 90.0,
-                    margin: EdgeInsets.only(left: 50.0),
-                    child: Text(
-                      'Mr Ng',
-                      style: TextStyle(
-                        fontSize: 18.0,
-                      ),
-                    )
-                  )
-                ],
+
+                    Row(
+                      children: [
+                        SizedBox(width: 45.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            'Time In: ',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '08:12',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        SizedBox(width: 20.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            'Time Out: ',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '12:05',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(width: 45.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            '',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '01:30',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        SizedBox(width: 20.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            '',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '--:--',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    SizedBox(height: 10.0),
+                    Divider(
+                      height: 1.0,
+                      thickness: 1.0,
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0, bottom: 10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 25.0,
+                                height: 25.0,
+                                margin: EdgeInsets.only(left: 10.0),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 37, 246, 11),
+                                  borderRadius: BorderRadius.all(Radius.circular(12.5)),
+                                ),
+                              ),
+                              SizedBox(width: 10.0),
+                              SizedBox(
+                                width: 80.0,
+                                child: Text(
+                                  'Name: ',
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                  ),
+                                ),
+                              ),
+                              Flexible(
+                                child: Text(
+                                  'Mdm Ong Kim Swee',
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            SizedBox(
+                              width: 100.0,
+                              child: TextButton(
+                                onPressed: () {
+
+                                },
+                                child: Text(
+                                  'Absent',
+                                  style: TextStyle(
+                                    color: Color.fromARGB(255, 83, 88, 82),
+                                  ),
+                                ),
+                                style: TextButton.styleFrom(
+                                  primary: Color.fromARGB(255, 83, 88, 82),
+                                  backgroundColor: Color.fromARGB(255, 110, 120, 111),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10.0),
+                          ],
+                        ),
+                      ],
+                    ),
+
+                    Row(
+                      children: [
+                        SizedBox(width: 45.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            'Time In: ',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '10:12',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        SizedBox(width: 20.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            'Time Out: ',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '03:42',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    SizedBox(height: 10.0),
+                    Divider(
+                      height: 1.0,
+                      thickness: 1.0,
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
+              ),
+
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0, bottom: 10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 25.0,
+                                height: 25.0,
+                                margin: EdgeInsets.only(left: 10.0),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 37, 246, 11),
+                                  borderRadius: BorderRadius.all(Radius.circular(12.5)),
+                                ),
+                              ),
+                              SizedBox(width: 10.0),
+                              SizedBox(
+                                width: 80.0,
+                                child: Text(
+                                  'Name: ',
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                  ),
+                                ),
+                              ),
+                              Flexible(
+                                child: Text(
+                                  'Mr Ng Thye Peng',
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            SizedBox(
+                              width: 100.0,
+                              child: TextButton(
+                                onPressed: () {
+
+                                },
+                                child: Text(
+                                  'Clear',
+                                  style: TextStyle(
+                                    color: Color.fromARGB(255, 83, 88, 82),
+                                  ),
+                                ),
+                                style: TextButton.styleFrom(
+                                  primary: Color.fromARGB(255, 83, 88, 82),
+                                  backgroundColor: Color.fromARGB(255, 40, 193, 53),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10.0),
+                          ],
+                        ),
+                      ],
+                    ),
+
+                    Row(
+                      children: [
+                        SizedBox(width: 45.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            'Time In: ',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '08:12',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        SizedBox(width: 20.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            'Time Out: ',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '12:05',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(width: 45.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            '',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '01:30',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        SizedBox(width: 20.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            '',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '--:--',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    SizedBox(height: 10.0),
+                    Divider(
+                      height: 1.0,
+                      thickness: 1.0,
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
+              ),
+
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0, bottom: 10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 25.0,
+                                height: 25.0,
+                                margin: EdgeInsets.only(left: 10.0),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 37, 246, 11),
+                                  borderRadius: BorderRadius.all(Radius.circular(12.5)),
+                                ),
+                              ),
+                              SizedBox(width: 10.0),
+                              SizedBox(
+                                width: 80.0,
+                                child: Text(
+                                  'Name: ',
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                  ),
+                                ),
+                              ),
+                              Flexible(
+                                child: Text(
+                                  'Mr Ng Thye Peng',
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            SizedBox(
+                              width: 100.0,
+                              child: TextButton(
+                                onPressed: () {
+
+                                },
+                                child: Text(
+                                  'Clear',
+                                  style: TextStyle(
+                                    color: Color.fromARGB(255, 83, 88, 82),
+                                  ),
+                                ),
+                                style: TextButton.styleFrom(
+                                  primary: Color.fromARGB(255, 83, 88, 82),
+                                  backgroundColor: Color.fromARGB(255, 40, 193, 53),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10.0),
+                          ],
+                        ),
+                      ],
+                    ),
+
+                    Row(
+                      children: [
+                        SizedBox(width: 45.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            'Time In: ',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '08:12',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        SizedBox(width: 20.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            'Time Out: ',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '12:05',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(width: 45.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            '',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '01:30',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        SizedBox(width: 20.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            '',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '--:--',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    SizedBox(height: 10.0),
+                    Divider(
+                      height: 1.0,
+                      thickness: 1.0,
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
+              ),
+
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0, bottom: 10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 25.0,
+                                height: 25.0,
+                                margin: EdgeInsets.only(left: 10.0),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 37, 246, 11),
+                                  borderRadius: BorderRadius.all(Radius.circular(12.5)),
+                                ),
+                              ),
+                              SizedBox(width: 10.0),
+                              SizedBox(
+                                width: 80.0,
+                                child: Text(
+                                  'Name: ',
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                  ),
+                                ),
+                              ),
+                              Flexible(
+                                child: Text(
+                                  'Mr Ng Thye Peng',
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            SizedBox(
+                              width: 100.0,
+                              child: TextButton(
+                                onPressed: () {
+
+                                },
+                                child: Text(
+                                  'Clear',
+                                  style: TextStyle(
+                                    color: Color.fromARGB(255, 83, 88, 82),
+                                  ),
+                                ),
+                                style: TextButton.styleFrom(
+                                  primary: Color.fromARGB(255, 83, 88, 82),
+                                  backgroundColor: Color.fromARGB(255, 40, 193, 53),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10.0),
+                          ],
+                        ),
+                      ],
+                    ),
+
+                    Row(
+                      children: [
+                        SizedBox(width: 45.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            'Time In: ',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '08:12',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        SizedBox(width: 20.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            'Time Out: ',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '12:05',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(width: 45.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            '',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '01:30',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        SizedBox(width: 20.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            '',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '--:--',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    SizedBox(height: 10.0),
+                    Divider(
+                      height: 1.0,
+                      thickness: 1.0,
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
+              ),
+
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0, bottom: 10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 25.0,
+                                height: 25.0,
+                                margin: EdgeInsets.only(left: 10.0),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 37, 246, 11),
+                                  borderRadius: BorderRadius.all(Radius.circular(12.5)),
+                                ),
+                              ),
+                              SizedBox(width: 10.0),
+                              SizedBox(
+                                width: 80.0,
+                                child: Text(
+                                  'Name: ',
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                  ),
+                                ),
+                              ),
+                              Flexible(
+                                child: Text(
+                                  'Mr Ng Thye Peng',
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            SizedBox(
+                              width: 100.0,
+                              child: TextButton(
+                                onPressed: () {
+
+                                },
+                                child: Text(
+                                  'Clear',
+                                  style: TextStyle(
+                                    color: Color.fromARGB(255, 83, 88, 82),
+                                  ),
+                                ),
+                                style: TextButton.styleFrom(
+                                  primary: Color.fromARGB(255, 83, 88, 82),
+                                  backgroundColor: Color.fromARGB(255, 40, 193, 53),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10.0),
+                          ],
+                        ),
+                      ],
+                    ),
+
+                    Row(
+                      children: [
+                        SizedBox(width: 45.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            'Time In: ',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '08:12',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        SizedBox(width: 20.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            'Time Out: ',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '12:05',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(width: 45.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            '',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '01:30',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        SizedBox(width: 20.0),
+                        SizedBox(
+                          width: 80.0,
+                          child: Text(
+                            '',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '--:--',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    SizedBox(height: 10.0),
+                    Divider(
+                      height: 1.0,
+                      thickness: 1.0,
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
