@@ -140,10 +140,13 @@ class _HomeState extends State<Home> {
             ),
 
             SizedBox(height: 10.0),
-            Divider(
-              height: 1.0,
-              thickness: 1.0,
-              color: Colors.grey,
+            Padding(
+              padding: EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Divider(
+                height: 1.0,
+                thickness: 1.0,
+                color: Colors.grey,
+              ),
             ),
           ],
         ),
@@ -257,10 +260,13 @@ class _HomeState extends State<Home> {
             ),
 
             SizedBox(height: 10.0),
-            Divider(
-              height: 1.0,
-              thickness: 1.0,
-              color: Colors.grey,
+            Padding(
+              padding: EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Divider(
+                height: 1.0,
+                thickness: 1.0,
+                color: Colors.grey,
+              ),
             ),
           ],
         ),
@@ -416,10 +422,13 @@ class _HomeState extends State<Home> {
             ),
 
             SizedBox(height: 10.0),
-            Divider(
-              height: 1.0,
-              thickness: 1.0,
-              color: Colors.grey,
+            Padding(
+              padding: EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Divider(
+                height: 1.0,
+                thickness: 1.0,
+                color: Colors.grey,
+              ),
             ),
           ],
         ),
@@ -533,10 +542,13 @@ class _HomeState extends State<Home> {
             ),
 
             SizedBox(height: 10.0),
-            Divider(
-              height: 1.0,
-              thickness: 1.0,
-              color: Colors.grey,
+            Padding(
+              padding: EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Divider(
+                height: 1.0,
+                thickness: 1.0,
+                color: Colors.grey,
+              ),
             ),
           ],
         ),
@@ -650,10 +662,13 @@ class _HomeState extends State<Home> {
             ),
 
             SizedBox(height: 10.0),
-            Divider(
-              height: 1.0,
-              thickness: 1.0,
-              color: Colors.grey,
+            Padding(
+              padding: EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Divider(
+                height: 1.0,
+                thickness: 1.0,
+                color: Colors.grey,
+              ),
             ),
           ],
         ),
@@ -767,10 +782,13 @@ class _HomeState extends State<Home> {
             ),
             
             SizedBox(height: 10.0),
-            Divider(
-              height: 1.0,
-              thickness: 1.0,
-              color: Colors.grey,
+            Padding(
+              padding: EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Divider(
+                height: 1.0,
+                thickness: 1.0,
+                color: Colors.grey,
+              ),
             ),
           ],
         ),
@@ -788,7 +806,10 @@ class _HomeState extends State<Home> {
         backgroundColor: Color.fromARGB(255, 0, 75, 140),
         centerTitle: false,
         leadingWidth: 130.0,
-        leading: SizedBox(width: 130.0),
+        leading: SizedBox(
+          width: 158.0,
+          child: Image.asset('images/imgs/logo.png'),
+        ),
         title: Align(
           child: Padding(
             padding: EdgeInsets.only(right: 25.0),
@@ -797,6 +818,7 @@ class _HomeState extends State<Home> {
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 24.0,
+                fontFamily: 'Roboto',
               ),
             ),
           ),
@@ -875,6 +897,7 @@ class _HomeState extends State<Home> {
                       style: TextStyle(
                         fontSize: 16.0,
                         color: Color.fromARGB(255, 238, 246, 251),
+                        fontFamily: 'Roboto',
                       ),
                     ),
                     Text(
@@ -882,6 +905,7 @@ class _HomeState extends State<Home> {
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
+                        fontFamily: 'Roboto',
                         color: Color.fromARGB(255, 238, 246, 251),
                       ),
                     ),
@@ -890,6 +914,7 @@ class _HomeState extends State<Home> {
                       'Attempts : ',
                       style: TextStyle(
                         fontSize: 16.0,
+                        fontFamily: 'Roboto',
                         color: Color.fromARGB(255, 238, 246, 251),
                       ),
                     ),
@@ -898,6 +923,7 @@ class _HomeState extends State<Home> {
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
+                        fontFamily: 'Roboto',
                         color: Color.fromARGB(255, 238, 246, 251),
                       ),
                     ),
@@ -914,6 +940,7 @@ class _HomeState extends State<Home> {
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
+                        fontFamily: 'Roboto',
                         color: Color.fromARGB(255, 238, 246, 251),
                       ),
                     ),
