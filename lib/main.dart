@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+        appBarTheme: Theme.of(context).appBarTheme.copyWith(shadowColor: Colors.black),
       ),
       initialRoute: Home.routeName,
       routes: {

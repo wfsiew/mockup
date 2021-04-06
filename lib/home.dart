@@ -1,5 +1,16 @@
 import 'package:flutter/material.dart';
 
+class Sort {
+
+  final String field;
+  final String dir;
+
+  Sort({
+    this.field,
+    this.dir,
+  });
+}
+
 class Home extends StatefulWidget {
 
   static final String routeName = 'Home';
@@ -9,6 +20,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  String sortBy;
+  String dir;
+
+  void showSortOptions() async {
+
+  }
 
   List<Widget> buildList() {
     final lx = [
@@ -803,6 +821,7 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         toolbarHeight: 60.0,
+        brightness: Brightness.dark,
         backgroundColor: Color.fromARGB(255, 0, 75, 140),
         centerTitle: false,
         leadingWidth: 130.0,
@@ -824,6 +843,18 @@ class _HomeState extends State<Home> {
           ),
           alignment: Alignment.centerRight,
         ),
+        // actions: [
+        //   PopupMenuButton<Choice>(
+        //     itemBuilder: (context) {
+        //       return choices.map((k) {
+        //         return PopupMenuItem(
+        //           value: k,
+        //           child: Text(k.title),
+        //         );
+        //       }).toList();
+        //     },
+        //   ),
+        // ],
       ),
       body: SafeArea(
         child: Column(
@@ -867,6 +898,18 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     ],
+                  ),
+                  InkWell(
+                    onTap: () {
+
+                    },
+                    child: Text(
+                      'Sort by',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        color: Colors.black,
+                      ),
+                    ),
                   ),
                 ],
               ),
