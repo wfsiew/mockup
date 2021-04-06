@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -36,6 +35,10 @@ class _HomeState extends State<Home> {
         ),
       ),
       body: SafeArea(
+        
+
+
+
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -85,7 +88,7 @@ class _HomeState extends State<Home> {
               
               Container(
                 color: Colors.white,
-                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0, bottom: 10.0),
+                padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -106,7 +109,7 @@ class _HomeState extends State<Home> {
                               ),
                               SizedBox(width: 10.0),
                               SizedBox(
-                                width: 80.0,
+                                width: 70.0,
                                 child: Text(
                                   'Name: ',
                                   style: TextStyle(
@@ -129,7 +132,7 @@ class _HomeState extends State<Home> {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             SizedBox(
-                              width: 100.0,
+                              width: 120.0,
                               child: TextButton(
                                 onPressed: () {
 
@@ -137,6 +140,7 @@ class _HomeState extends State<Home> {
                                 child: Text(
                                   'Clear',
                                   style: TextStyle(
+                                    fontSize: 18.0,
                                     color: Color.fromARGB(255, 83, 88, 82),
                                   ),
                                 ),
@@ -156,7 +160,7 @@ class _HomeState extends State<Home> {
                       children: [
                         SizedBox(width: 45.0),
                         SizedBox(
-                          width: 80.0,
+                          width: 70.0,
                           child: Text(
                             'Time In: ',
                             style: TextStyle(
@@ -170,7 +174,7 @@ class _HomeState extends State<Home> {
                             fontSize: 18.0,
                           ),
                         ),
-                        SizedBox(width: 20.0),
+                        SizedBox(width: 30.0),
                         SizedBox(
                           width: 80.0,
                           child: Text(
@@ -191,31 +195,15 @@ class _HomeState extends State<Home> {
                     Row(
                       children: [
                         SizedBox(width: 45.0),
-                        SizedBox(
-                          width: 80.0,
-                          child: Text(
-                            '',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                          ),
-                        ),
+                        SizedBox(width: 70.0),
                         Text(
                           '01:30',
                           style: TextStyle(
                             fontSize: 18.0,
                           ),
                         ),
-                        SizedBox(width: 20.0),
-                        SizedBox(
-                          width: 80.0,
-                          child: Text(
-                            '',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                          ),
-                        ),
+                        SizedBox(width: 30.0),
+                        SizedBox(width: 80.0),
                         Text(
                           '--:--',
                           style: TextStyle(
@@ -237,7 +225,7 @@ class _HomeState extends State<Home> {
 
               Container(
                 color: Colors.white,
-                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0, bottom: 10.0),
+                padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -252,13 +240,13 @@ class _HomeState extends State<Home> {
                                 height: 25.0,
                                 margin: EdgeInsets.only(left: 10.0),
                                 decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 37, 246, 11),
+                                  color: Color.fromARGB(255, 195, 212, 193),
                                   borderRadius: BorderRadius.all(Radius.circular(12.5)),
                                 ),
                               ),
                               SizedBox(width: 10.0),
                               SizedBox(
-                                width: 80.0,
+                                width: 70.0,
                                 child: Text(
                                   'Name: ',
                                   style: TextStyle(
@@ -281,7 +269,7 @@ class _HomeState extends State<Home> {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             SizedBox(
-                              width: 100.0,
+                              width: 120.0,
                               child: TextButton(
                                 onPressed: () {
 
@@ -289,6 +277,7 @@ class _HomeState extends State<Home> {
                                 child: Text(
                                   'Absent',
                                   style: TextStyle(
+                                    fontSize: 18.0,
                                     color: Color.fromARGB(255, 83, 88, 82),
                                   ),
                                 ),
@@ -308,7 +297,7 @@ class _HomeState extends State<Home> {
                       children: [
                         SizedBox(width: 45.0),
                         SizedBox(
-                          width: 80.0,
+                          width: 70.0,
                           child: Text(
                             'Time In: ',
                             style: TextStyle(
@@ -322,7 +311,7 @@ class _HomeState extends State<Home> {
                             fontSize: 18.0,
                           ),
                         ),
-                        SizedBox(width: 20.0),
+                        SizedBox(width: 30.0),
                         SizedBox(
                           width: 80.0,
                           child: Text(
@@ -353,7 +342,7 @@ class _HomeState extends State<Home> {
 
               Container(
                 color: Colors.white,
-                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0, bottom: 10.0),
+                padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -374,7 +363,7 @@ class _HomeState extends State<Home> {
                               ),
                               SizedBox(width: 10.0),
                               SizedBox(
-                                width: 80.0,
+                                width: 70.0,
                                 child: Text(
                                   'Name: ',
                                   style: TextStyle(
@@ -384,9 +373,9 @@ class _HomeState extends State<Home> {
                               ),
                               Flexible(
                                 child: Text(
-                                  'Mr Ng Thye Peng',
+                                  'Mdm Lim Yan Mei',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 16.0,
                                   ),
                                 ),
                               ),
@@ -397,20 +386,21 @@ class _HomeState extends State<Home> {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             SizedBox(
-                              width: 100.0,
+                              width: 120.0,
                               child: TextButton(
                                 onPressed: () {
 
                                 },
                                 child: Text(
-                                  'Clear',
+                                  'Exit (Temp)',
                                   style: TextStyle(
+                                    fontSize: 18.0,
                                     color: Color.fromARGB(255, 83, 88, 82),
                                   ),
                                 ),
                                 style: TextButton.styleFrom(
                                   primary: Color.fromARGB(255, 83, 88, 82),
-                                  backgroundColor: Color.fromARGB(255, 40, 193, 53),
+                                  backgroundColor: Color.fromARGB(255, 232, 203, 21),
                                 ),
                               ),
                             ),
@@ -424,7 +414,7 @@ class _HomeState extends State<Home> {
                       children: [
                         SizedBox(width: 45.0),
                         SizedBox(
-                          width: 80.0,
+                          width: 70.0,
                           child: Text(
                             'Time In: ',
                             style: TextStyle(
@@ -433,12 +423,12 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         Text(
-                          '08:12',
+                          '08:45',
                           style: TextStyle(
                             fontSize: 18.0,
                           ),
                         ),
-                        SizedBox(width: 20.0),
+                        SizedBox(width: 30.0),
                         SizedBox(
                           width: 80.0,
                           child: Text(
@@ -459,26 +449,149 @@ class _HomeState extends State<Home> {
                     Row(
                       children: [
                         SizedBox(width: 45.0),
+                        SizedBox(width: 70.0),
+                        Text(
+                          '--:--',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        SizedBox(width: 50.0),
+                        SizedBox(width: 80.0),
+                        Text(
+                          '01:40',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            color: Colors.red,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(width: 45.0),
+                        SizedBox(width: 70.0),
+                        Text(
+                          '--:--',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        SizedBox(width: 50.0),
+                        SizedBox(width: 80.0),
+                        Text(
+                          '01:43',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            color: Colors.red,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    SizedBox(height: 10.0),
+                    Divider(
+                      height: 1.0,
+                      thickness: 1.0,
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
+              ),
+
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 25.0,
+                                height: 25.0,
+                                margin: EdgeInsets.only(left: 10.0),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 37, 246, 11),
+                                  borderRadius: BorderRadius.all(Radius.circular(12.5)),
+                                ),
+                              ),
+                              SizedBox(width: 10.0),
+                              SizedBox(
+                                width: 70.0,
+                                child: Text(
+                                  'Name: ',
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                  ),
+                                ),
+                              ),
+                              Flexible(
+                                child: Text(
+                                  'Mr Goh Geok Hui',
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            SizedBox(
+                              width: 120.0,
+                              child: TextButton(
+                                onPressed: () {
+
+                                },
+                                child: Text(
+                                  'Clear',
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                    color: Color.fromARGB(255, 83, 88, 82),
+                                  ),
+                                ),
+                                style: TextButton.styleFrom(
+                                  primary: Color.fromARGB(255, 83, 88, 82),
+                                  backgroundColor: Color.fromARGB(255, 40, 193, 53),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10.0),
+                          ],
+                        ),
+                      ],
+                    ),
+
+                    Row(
+                      children: [
+                        SizedBox(width: 45.0),
                         SizedBox(
-                          width: 80.0,
+                          width: 70.0,
                           child: Text(
-                            '',
+                            'Time In: ',
                             style: TextStyle(
                               fontSize: 16.0,
                             ),
                           ),
                         ),
                         Text(
-                          '01:30',
+                          '08:05',
                           style: TextStyle(
                             fontSize: 18.0,
                           ),
                         ),
-                        SizedBox(width: 20.0),
+                        SizedBox(width: 30.0),
                         SizedBox(
                           width: 80.0,
                           child: Text(
-                            '',
+                            'Time Out: ',
                             style: TextStyle(
                               fontSize: 16.0,
                             ),
@@ -505,7 +618,7 @@ class _HomeState extends State<Home> {
 
               Container(
                 color: Colors.white,
-                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0, bottom: 10.0),
+                padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -520,13 +633,13 @@ class _HomeState extends State<Home> {
                                 height: 25.0,
                                 margin: EdgeInsets.only(left: 10.0),
                                 decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 37, 246, 11),
+                                  color: Color.fromARGB(255, 195, 212, 193),
                                   borderRadius: BorderRadius.all(Radius.circular(12.5)),
                                 ),
                               ),
                               SizedBox(width: 10.0),
                               SizedBox(
-                                width: 80.0,
+                                width: 70.0,
                                 child: Text(
                                   'Name: ',
                                   style: TextStyle(
@@ -536,9 +649,9 @@ class _HomeState extends State<Home> {
                               ),
                               Flexible(
                                 child: Text(
-                                  'Mr Ng Thye Peng',
+                                  'Mdm Chan Kong Beng',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 16.0,
                                   ),
                                 ),
                               ),
@@ -549,20 +662,21 @@ class _HomeState extends State<Home> {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             SizedBox(
-                              width: 100.0,
+                              width: 120.0,
                               child: TextButton(
                                 onPressed: () {
 
                                 },
                                 child: Text(
-                                  'Clear',
+                                  'Absent',
                                   style: TextStyle(
+                                    fontSize: 18.0,
                                     color: Color.fromARGB(255, 83, 88, 82),
                                   ),
                                 ),
                                 style: TextButton.styleFrom(
                                   primary: Color.fromARGB(255, 83, 88, 82),
-                                  backgroundColor: Color.fromARGB(255, 40, 193, 53),
+                                  backgroundColor: Color.fromARGB(255, 110, 120, 111),
                                 ),
                               ),
                             ),
@@ -576,7 +690,7 @@ class _HomeState extends State<Home> {
                       children: [
                         SizedBox(width: 45.0),
                         SizedBox(
-                          width: 80.0,
+                          width: 70.0,
                           child: Text(
                             'Time In: ',
                             style: TextStyle(
@@ -585,12 +699,12 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         Text(
-                          '08:12',
+                          '10:05',
                           style: TextStyle(
                             fontSize: 18.0,
                           ),
                         ),
-                        SizedBox(width: 20.0),
+                        SizedBox(width: 30.0),
                         SizedBox(
                           width: 80.0,
                           child: Text(
@@ -601,43 +715,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         Text(
-                          '12:05',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(width: 45.0),
-                        SizedBox(
-                          width: 80.0,
-                          child: Text(
-                            '',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          '01:30',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                          ),
-                        ),
-                        SizedBox(width: 20.0),
-                        SizedBox(
-                          width: 80.0,
-                          child: Text(
-                            '',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          '--:--',
+                          '04:05',
                           style: TextStyle(
                             fontSize: 18.0,
                           ),
@@ -657,7 +735,7 @@ class _HomeState extends State<Home> {
 
               Container(
                 color: Colors.white,
-                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0, bottom: 10.0),
+                padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -672,13 +750,13 @@ class _HomeState extends State<Home> {
                                 height: 25.0,
                                 margin: EdgeInsets.only(left: 10.0),
                                 decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 37, 246, 11),
+                                  color: Color.fromARGB(255, 195, 212, 193),
                                   borderRadius: BorderRadius.all(Radius.circular(12.5)),
                                 ),
                               ),
                               SizedBox(width: 10.0),
                               SizedBox(
-                                width: 80.0,
+                                width: 70.0,
                                 child: Text(
                                   'Name: ',
                                   style: TextStyle(
@@ -688,9 +766,9 @@ class _HomeState extends State<Home> {
                               ),
                               Flexible(
                                 child: Text(
-                                  'Mr Ng Thye Peng',
+                                  'Mdm Yang How Wee',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 16.0,
                                   ),
                                 ),
                               ),
@@ -701,20 +779,21 @@ class _HomeState extends State<Home> {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             SizedBox(
-                              width: 100.0,
+                              width: 120.0,
                               child: TextButton(
                                 onPressed: () {
 
                                 },
                                 child: Text(
-                                  'Clear',
+                                  'Absent',
                                   style: TextStyle(
+                                    fontSize: 18.0,
                                     color: Color.fromARGB(255, 83, 88, 82),
                                   ),
                                 ),
                                 style: TextButton.styleFrom(
                                   primary: Color.fromARGB(255, 83, 88, 82),
-                                  backgroundColor: Color.fromARGB(255, 40, 193, 53),
+                                  backgroundColor: Color.fromARGB(255, 110, 120, 111),
                                 ),
                               ),
                             ),
@@ -728,7 +807,7 @@ class _HomeState extends State<Home> {
                       children: [
                         SizedBox(width: 45.0),
                         SizedBox(
-                          width: 80.0,
+                          width: 70.0,
                           child: Text(
                             'Time In: ',
                             style: TextStyle(
@@ -737,12 +816,12 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         Text(
-                          '08:12',
+                          '09:50',
                           style: TextStyle(
                             fontSize: 18.0,
                           ),
                         ),
-                        SizedBox(width: 20.0),
+                        SizedBox(width: 30.0),
                         SizedBox(
                           width: 80.0,
                           child: Text(
@@ -753,202 +832,14 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         Text(
-                          '12:05',
+                          '03:56',
                           style: TextStyle(
                             fontSize: 18.0,
                           ),
                         ),
                       ],
                     ),
-                    Row(
-                      children: [
-                        SizedBox(width: 45.0),
-                        SizedBox(
-                          width: 80.0,
-                          child: Text(
-                            '',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          '01:30',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                          ),
-                        ),
-                        SizedBox(width: 20.0),
-                        SizedBox(
-                          width: 80.0,
-                          child: Text(
-                            '',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          '--:--',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    SizedBox(height: 10.0),
-                    Divider(
-                      height: 1.0,
-                      thickness: 1.0,
-                      color: Colors.grey,
-                    ),
-                  ],
-                ),
-              ),
-
-              Container(
-                color: Colors.white,
-                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0, bottom: 10.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Container(
-                                width: 25.0,
-                                height: 25.0,
-                                margin: EdgeInsets.only(left: 10.0),
-                                decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 37, 246, 11),
-                                  borderRadius: BorderRadius.all(Radius.circular(12.5)),
-                                ),
-                              ),
-                              SizedBox(width: 10.0),
-                              SizedBox(
-                                width: 80.0,
-                                child: Text(
-                                  'Name: ',
-                                  style: TextStyle(
-                                    fontSize: 16.0,
-                                  ),
-                                ),
-                              ),
-                              Flexible(
-                                child: Text(
-                                  'Mr Ng Thye Peng',
-                                  style: TextStyle(
-                                    fontSize: 18.0,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            SizedBox(
-                              width: 100.0,
-                              child: TextButton(
-                                onPressed: () {
-
-                                },
-                                child: Text(
-                                  'Clear',
-                                  style: TextStyle(
-                                    color: Color.fromARGB(255, 83, 88, 82),
-                                  ),
-                                ),
-                                style: TextButton.styleFrom(
-                                  primary: Color.fromARGB(255, 83, 88, 82),
-                                  backgroundColor: Color.fromARGB(255, 40, 193, 53),
-                                ),
-                              ),
-                            ),
-                            SizedBox(width: 10.0),
-                          ],
-                        ),
-                      ],
-                    ),
-
-                    Row(
-                      children: [
-                        SizedBox(width: 45.0),
-                        SizedBox(
-                          width: 80.0,
-                          child: Text(
-                            'Time In: ',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          '08:12',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                          ),
-                        ),
-                        SizedBox(width: 20.0),
-                        SizedBox(
-                          width: 80.0,
-                          child: Text(
-                            'Time Out: ',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          '12:05',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(width: 45.0),
-                        SizedBox(
-                          width: 80.0,
-                          child: Text(
-                            '',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          '01:30',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                          ),
-                        ),
-                        SizedBox(width: 20.0),
-                        SizedBox(
-                          width: 80.0,
-                          child: Text(
-                            '',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          '--:--',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                          ),
-                        ),
-                      ],
-                    ),
-
+                    
                     SizedBox(height: 10.0),
                     Divider(
                       height: 1.0,
