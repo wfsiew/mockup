@@ -17,6 +17,7 @@ class _HomeState extends State<Home> {
   String dir;
   int tempStatus = 0;
   bool isSearch = false;
+  int attempt = 3;
   DateTime now;
 
   @override
@@ -362,10 +363,12 @@ class _HomeState extends State<Home> {
                         onPressed: () {
                           setState(() {
                             tempStatus = 1;
+                            --attempt;
                           });
                           Future.delayed(Duration(seconds: 15), () {
                             setState(() {
                               tempStatus = 0;
+                              ++attempt;
                             });
                           });
                         },
@@ -1099,7 +1102,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     Text(
-                      '3',
+                      '$attempt',
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
