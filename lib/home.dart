@@ -1,16 +1,6 @@
+import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
 import 'package:menu_button/menu_button.dart';
-
-class Sort {
-
-  final String field;
-  final String dir;
-
-  Sort({
-    this.field,
-    this.dir,
-  });
-}
 
 class Home extends StatefulWidget {
 
@@ -24,9 +14,16 @@ class _HomeState extends State<Home> {
 
   String sortBy;
   String dir;
+  int tempStatus = 0;
 
-  void showSortOptions() async {
+  String getDate() {
+    var dt = DateTime.now();
+    return formatDate(dt, [DD, ', ', d, ' ', MM]);
+  }
 
+  String getTime() {
+    var dt = DateTime.now();
+    return formatDate(dt, [hh, ':', nn]);
   }
 
   List<Widget> buildList() {
@@ -78,7 +75,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(
-                      width: 110.0,
+                      width: 120.0,
                       child: TextButton(
                         onPressed: () {
 
@@ -219,11 +216,9 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(
-                      width: 110.0,
+                      width: 120.0,
                       child: TextButton(
-                        onPressed: () {
-
-                        },
+                        onPressed: null,
                         child: Text(
                           'Absent',
                           style: TextStyle(
@@ -340,13 +335,20 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(
-                      width: 110.0,
+                      width: 120.0,
                       child: TextButton(
                         onPressed: () {
-
+                          setState(() {
+                            tempStatus = 1;
+                          });
+                          Future.delayed(Duration(seconds: 15), () {
+                            setState(() {
+                              tempStatus = 0;
+                            });
+                          });
                         },
                         child: Text(
-                          'Exit (Temp)',
+                          tempStatus == 0 ? 'Exit (Temp)' : 'Clear (Temp)',
                           style: TextStyle(
                             fontSize: 16.0,
                             color: Color.fromARGB(255, 83, 88, 82),
@@ -354,7 +356,7 @@ class _HomeState extends State<Home> {
                         ),
                         style: TextButton.styleFrom(
                           primary: Color.fromARGB(255, 83, 88, 82),
-                          backgroundColor: Color.fromARGB(255, 232, 203, 21),
+                          backgroundColor: tempStatus == 0 ? Color.fromARGB(255, 232, 203, 21) : Color.fromARGB(255, 40, 193, 53),
                         ),
                       ),
                     ),
@@ -503,7 +505,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(
-                      width: 110.0,
+                      width: 120.0,
                       child: TextButton(
                         onPressed: () {
 
@@ -624,11 +626,9 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(
-                      width: 110.0,
+                      width: 120.0,
                       child: TextButton(
-                        onPressed: () {
-
-                        },
+                        onPressed: null,
                         child: Text(  
                           'Absent',
                           style: TextStyle(
@@ -745,11 +745,9 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(
-                      width: 110.0,
+                      width: 120.0,
                       child: TextButton(
-                        onPressed: () {
-
-                        },
+                        onPressed: null,
                         child: Text(
                           'Absent',
                           style: TextStyle(
@@ -888,7 +886,7 @@ class _HomeState extends State<Home> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Tuesday, 6 April',
+                        getDate(),
                         style: TextStyle(
                           fontSize: 22.0,
                           color: Colors.white,
@@ -898,7 +896,7 @@ class _HomeState extends State<Home> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Text(
-                            '04:17',
+                            getTime(),
                             style: TextStyle(
                               fontSize: 20.0,
                               color: Colors.white,
