@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
                         child: Text(
                           'Mr Ng Thye Peng',
                           style: TextStyle(
-                            fontSize: 18.0,
+                            fontSize: 16.0,
                           ),
                         ),
                       ),
@@ -84,7 +84,7 @@ class _HomeState extends State<Home> {
                         child: Text(
                           'Clear',
                           style: TextStyle(
-                            fontSize: 18.0,
+                            fontSize: 16.0,
                             color: Color.fromARGB(255, 83, 88, 82),
                           ),
                         ),
@@ -115,7 +115,7 @@ class _HomeState extends State<Home> {
                 Text(
                   '08:12',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
                 SizedBox(width: 30.0),
@@ -131,7 +131,7 @@ class _HomeState extends State<Home> {
                 Text(
                   '12:05',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
               ],
@@ -143,7 +143,7 @@ class _HomeState extends State<Home> {
                 Text(
                   '01:30',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
                 SizedBox(width: 30.0),
@@ -151,7 +151,7 @@ class _HomeState extends State<Home> {
                 Text(
                   '--:--',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
               ],
@@ -205,7 +205,7 @@ class _HomeState extends State<Home> {
                         child: Text(
                           'Mdm Ong Kim Swee',
                           style: TextStyle(
-                            fontSize: 18.0,
+                            fontSize: 16.0,
                           ),
                         ),
                       ),
@@ -224,7 +224,7 @@ class _HomeState extends State<Home> {
                         child: Text(
                           'Absent',
                           style: TextStyle(
-                            fontSize: 18.0,
+                            fontSize: 16.0,
                             color: Color.fromARGB(255, 83, 88, 82),
                           ),
                         ),
@@ -255,7 +255,7 @@ class _HomeState extends State<Home> {
                 Text(
                   '10:12',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
                 SizedBox(width: 30.0),
@@ -271,7 +271,7 @@ class _HomeState extends State<Home> {
                 Text(
                   '03:42',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
               ],
@@ -344,7 +344,7 @@ class _HomeState extends State<Home> {
                         child: Text(
                           'Exit (Temp)',
                           style: TextStyle(
-                            fontSize: 18.0,
+                            fontSize: 16.0,
                             color: Color.fromARGB(255, 83, 88, 82),
                           ),
                         ),
@@ -375,7 +375,7 @@ class _HomeState extends State<Home> {
                 Text(
                   '08:45',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
                 SizedBox(width: 30.0),
@@ -391,7 +391,7 @@ class _HomeState extends State<Home> {
                 Text(
                   '12:05',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
               ],
@@ -403,15 +403,15 @@ class _HomeState extends State<Home> {
                 Text(
                   '--:--',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
-                SizedBox(width: 50.0),
+                SizedBox(width: 40.0),
                 SizedBox(width: 80.0),
                 Text(
                   '01:40',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                     color: Colors.red,
                   ),
                 ),
@@ -424,15 +424,15 @@ class _HomeState extends State<Home> {
                 Text(
                   '--:--',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
-                SizedBox(width: 50.0),
+                SizedBox(width: 40.0),
                 SizedBox(width: 80.0),
                 Text(
                   '01:43',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                     color: Colors.red,
                   ),
                 ),
@@ -506,7 +506,7 @@ class _HomeState extends State<Home> {
                         child: Text(
                           'Clear',
                           style: TextStyle(
-                            fontSize: 18.0,
+                            fontSize: 16.0,
                             color: Color.fromARGB(255, 83, 88, 82),
                           ),
                         ),
@@ -537,7 +537,7 @@ class _HomeState extends State<Home> {
                 Text(
                   '08:05',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
                 SizedBox(width: 30.0),
@@ -553,7 +553,7 @@ class _HomeState extends State<Home> {
                 Text(
                   '--:--',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
               ],
@@ -626,7 +626,7 @@ class _HomeState extends State<Home> {
                         child: Text(
                           'Absent',
                           style: TextStyle(
-                            fontSize: 18.0,
+                            fontSize: 16.0,
                             color: Color.fromARGB(255, 83, 88, 82),
                           ),
                         ),
@@ -657,7 +657,7 @@ class _HomeState extends State<Home> {
                 Text(
                   '10:05',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
                 SizedBox(width: 30.0),
@@ -673,7 +673,7 @@ class _HomeState extends State<Home> {
                 Text(
                   '04:05',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
               ],
@@ -746,7 +746,7 @@ class _HomeState extends State<Home> {
                         child: Text(
                           'Absent',
                           style: TextStyle(
-                            fontSize: 18.0,
+                            fontSize: 16.0,
                             color: Color.fromARGB(255, 83, 88, 82),
                           ),
                         ),
@@ -777,7 +777,7 @@ class _HomeState extends State<Home> {
                 Text(
                   '09:50',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
                 SizedBox(width: 30.0),
@@ -793,7 +793,7 @@ class _HomeState extends State<Home> {
                 Text(
                   '03:56',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
               ],
