@@ -163,8 +163,8 @@ class _HomeState extends State<Home> {
             Padding(
               padding: EdgeInsets.only(left: 10.0, right: 10.0),
               child: Divider(
-                height: 1.0,
-                thickness: 1.0,
+                height: 2.0,
+                thickness: 2.0,
                 color: Colors.grey,
               ),
             ),
@@ -284,8 +284,8 @@ class _HomeState extends State<Home> {
             Padding(
               padding: EdgeInsets.only(left: 10.0, right: 10.0),
               child: Divider(
-                height: 1.0,
-                thickness: 1.0,
+                height: 2.0,
+                thickness: 2.0,
                 color: Colors.grey,
               ),
             ),
@@ -447,8 +447,8 @@ class _HomeState extends State<Home> {
             Padding(
               padding: EdgeInsets.only(left: 10.0, right: 10.0),
               child: Divider(
-                height: 1.0,
-                thickness: 1.0,
+                height: 2.0,
+                thickness: 2.0,
                 color: Colors.grey,
               ),
             ),
@@ -568,8 +568,8 @@ class _HomeState extends State<Home> {
             Padding(
               padding: EdgeInsets.only(left: 10.0, right: 10.0),
               child: Divider(
-                height: 1.0,
-                thickness: 1.0,
+                height: 2.0,
+                thickness: 2.0,
                 color: Colors.grey,
               ),
             ),
@@ -689,8 +689,8 @@ class _HomeState extends State<Home> {
             Padding(
               padding: EdgeInsets.only(left: 10.0, right: 10.0),
               child: Divider(
-                height: 1.0,
-                thickness: 1.0,
+                height: 2.0,
+                thickness: 2.0,
                 color: Colors.grey,
               ),
             ),
@@ -810,8 +810,8 @@ class _HomeState extends State<Home> {
             Padding(
               padding: EdgeInsets.only(left: 10.0, right: 10.0),
               child: Divider(
-                height: 1.0,
-                thickness: 1.0,
+                height: 2.0,
+                thickness: 2.0,
                 color: Colors.grey,
               ),
             ),
@@ -850,10 +850,13 @@ class _HomeState extends State<Home> {
         brightness: Brightness.dark,
         backgroundColor: Color.fromARGB(255, 0, 75, 140),
         centerTitle: false,
-        leadingWidth: 130.0,
+        leadingWidth: 160.0,
         leading: SizedBox(
-          width: 158.0,
-          child: Image.asset('images/imgs/logo.png'),
+          width: 160.0,
+          child: Padding(
+            padding: EdgeInsets.only(left: 8.0),
+            child: Image.asset('images/imgs/logo.png'),
+          ),
         ),
         title: Align(
           child: Padding(
@@ -1027,7 +1030,7 @@ class _HomeState extends State<Home> {
                         color: Color.fromARGB(255, 238, 246, 251),
                       ),
                     ),
-                    SizedBox(width: 10.0),
+                    SizedBox(width: 20.0),
                     Text(
                       'Attempts : ',
                       style: TextStyle(
@@ -1045,7 +1048,7 @@ class _HomeState extends State<Home> {
                         color: Color.fromARGB(255, 238, 246, 251),
                       ),
                     ),
-                    SizedBox(width: 10.0),
+                    SizedBox(width: 20.0),
                     Text(
                       'Present : ',
                       style: TextStyle(
