@@ -1,4 +1,5 @@
 import 'package:date_format/date_format.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:menu_button/menu_button.dart';
 
@@ -15,6 +16,27 @@ class _HomeState extends State<Home> {
   String sortBy;
   String dir;
   int tempStatus = 0;
+  bool isSearch = false;
+  DateTime now;
+
+  @override
+  void initState() {
+    super.initState();
+    load();
+  }
+
+  void load() {
+    setState(() {
+      now = DateTime.now();
+    });
+    waitAMinute();
+  }
+
+  void waitAMinute() {
+    Future.delayed(Duration(minutes: 1), () {
+      load();
+    });
+  }
 
   String getDate() {
     var dt = DateTime.now();
@@ -882,6 +904,21 @@ class _HomeState extends State<Home> {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
+                  isSearch ?
+                  Padding(
+                    padding: EdgeInsets.only(right: 15.0),
+                    child: CupertinoTextField(
+                      cursorColor: Colors.grey,
+                      prefix: IconButton(
+                        icon: Icon(Icons.close),
+                        onPressed: () {
+                          setState(() {
+                            isSearch = false;
+                          });
+                        },
+                      ),
+                    ),
+                  ) :
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -904,10 +941,17 @@ class _HomeState extends State<Home> {
                           ),
                           Padding(
                             padding: EdgeInsets.only(left: 10.0, right: 20.0),
-                            child: Icon(
-                              Icons.search,
-                              color: Colors.black,
-                              size: 32.0,
+                            child: IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  isSearch = true;
+                                });
+                              },
+                              icon: Icon(
+                                Icons.search,
+                                color: Colors.black,
+                                size: 32.0,
+                              ),
                             ),
                           )
                         ],
