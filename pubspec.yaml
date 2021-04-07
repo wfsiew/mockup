@@ -53,6 +53,16 @@ flutter:
     - family: Roboto
       fonts:
         - asset: fonts/Roboto-Regular.ttf
+    - family: Calibri_Light
+      fonts:
+        - asset: fonts/Calibri-Light.ttf
+    - family: Calibri
+      fonts:
+        - asset: fonts/Calibri-Regular.ttf
+        - asset: fonts/Calibri-Bold.ttf
+          weight: 700
+        - asset: fonts/Calibri-Italic.ttf
+          style: italic
 
   # To add assets to your application, add an assets section, like this:
   # assets:
