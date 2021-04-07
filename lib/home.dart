@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:menu_button/menu_button.dart';
 
 class Sort {
 
@@ -32,7 +33,7 @@ class _HomeState extends State<Home> {
     final lx = [
       Container(
         color: Colors.white,
-        padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
+        padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 5.0, bottom: 5.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -69,6 +70,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
+                      SizedBox(width: 5.0),
                     ],
                   ),
                 ),
@@ -76,7 +78,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(
-                      width: 120.0,
+                      width: 110.0,
                       child: TextButton(
                         onPressed: () {
 
@@ -172,7 +174,7 @@ class _HomeState extends State<Home> {
 
       Container(
         color: Colors.white,
-        padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
+        padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 0.0, bottom: 5.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -209,6 +211,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
+                      SizedBox(width: 5.0),
                     ],
                   ),
                 ),
@@ -216,7 +219,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(
-                      width: 120.0,
+                      width: 110.0,
                       child: TextButton(
                         onPressed: () {
 
@@ -292,7 +295,7 @@ class _HomeState extends State<Home> {
 
       Container(
         color: Colors.white,
-        padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
+        padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 0.0, bottom: 5.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -329,6 +332,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
+                      SizedBox(width: 5.0),
                     ],
                   ),
                 ),
@@ -336,7 +340,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(
-                      width: 120.0,
+                      width: 110.0,
                       child: TextButton(
                         onPressed: () {
 
@@ -454,7 +458,7 @@ class _HomeState extends State<Home> {
 
       Container(
         color: Colors.white,
-        padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
+        padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 0.0, bottom: 5.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -491,6 +495,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
+                      SizedBox(width: 5.0),
                     ],
                   ),
                 ),
@@ -498,7 +503,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(
-                      width: 120.0,
+                      width: 110.0,
                       child: TextButton(
                         onPressed: () {
 
@@ -574,7 +579,7 @@ class _HomeState extends State<Home> {
 
       Container(
         color: Colors.white,
-        padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
+        padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 0.0, bottom: 5.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -611,6 +616,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
+                      SizedBox(width: 5.0),
                     ],
                   ),
                 ),
@@ -618,12 +624,12 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(
-                      width: 120.0,
+                      width: 110.0,
                       child: TextButton(
                         onPressed: () {
 
                         },
-                        child: Text(
+                        child: Text(  
                           'Absent',
                           style: TextStyle(
                             fontSize: 16.0,
@@ -694,7 +700,7 @@ class _HomeState extends State<Home> {
 
       Container(
         color: Colors.white,
-        padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
+        padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 0.0, bottom: 5.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -731,6 +737,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
+                      SizedBox(width: 5.0),
                     ],
                   ),
                 ),
@@ -738,7 +745,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(
-                      width: 120.0,
+                      width: 110.0,
                       child: TextButton(
                         onPressed: () {
 
@@ -815,8 +822,27 @@ class _HomeState extends State<Home> {
     return lx;
   }
 
+  Widget getIcon(String value) {
+    if (dir == 'asc' && value == sortBy) {
+      return Icon(Icons.arrow_drop_up);
+    }
+
+    else if (dir == 'desc' && value == sortBy) {
+      return Icon(Icons.arrow_drop_down);
+    }
+
+    return Container();
+  }
+
   @override
   Widget build(BuildContext context) {
+    List<String> keys = <String>[
+      'Status',
+      'Time In',
+      'Time Out',
+      'Approve',
+    ];
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -887,17 +913,78 @@ class _HomeState extends State<Home> {
                       ),
                     ],
                   ),
-                  InkWell(
-                    onTap: () {
+                  // InkWell(
+                  //   onTap: () {
 
+                  //   },
+                  //   child: Text(
+                  //     'Sort by',
+                  //     style: TextStyle(
+                  //       fontSize: 16.0,
+                  //       color: Colors.black,
+                  //     ),
+                  //   ),
+                  // ),
+                  MenuButton<String>(
+                    topDivider: false,
+                    decoration: BoxDecoration(
+                      border: null,
+                      color: null,
+                    ),
+                    child: Container(
+                      width: 50.0,
+                      color: Color.fromARGB(255, 152, 201, 58),
+                      child: Text(
+                        'Sort by',
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ), 
+                    items: keys, 
+                    divider: Container(),
+                    itemBuilder: (value) {
+                      return Container(
+                        padding: EdgeInsets.only(left: 10.0, top: 10.0, bottom: 10.0),
+                        child: Row(
+                          children: [
+                            Text(value),
+                            getIcon(value),
+                          ],
+                        ),
+                      );
                     },
-                    child: Text(
-                      'Sort by',
-                      style: TextStyle(
-                        fontSize: 16.0,
-                        color: Colors.black,
+                    toggledChild: Container(
+                      width: 50.0,
+                      color: Color.fromARGB(255, 152, 201, 58),
+                      child: Text(
+                        'Sort by',
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: Colors.black,
+                        ),
                       ),
                     ),
+                    onItemSelected: (value) {
+                      setState(() {
+                        if (value == sortBy) {
+                          dir = dir == 'desc' ? 'asc' : 'desc';
+                        }
+
+                        if (dir == null) {
+                          dir = 'asc';
+                        }
+
+                        if (value != sortBy) {
+                          sortBy = value;
+                          dir = 'asc';
+                        }
+                      });
+                    },
+                    onMenuButtonToggle: (b) {
+
+                    },
                   ),
                 ],
               ),
@@ -981,10 +1068,6 @@ class _HomeState extends State<Home> {
             ),
           ],
         ),
-
-
-
-        
       ),
     );
   }
