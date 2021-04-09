@@ -1,4 +1,4 @@
-# flutter_application_1
+# residence_registry
 
 A new Flutter project.
 
